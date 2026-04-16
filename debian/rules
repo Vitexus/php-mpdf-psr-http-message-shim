@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p debian/php-mpdf-psr-http-message-shim/usr/share/php/Mpdf/PsrHttpMessageShim
+	cp -r src/* debian/php-mpdf-psr-http-message-shim/usr/share/php/Mpdf/PsrHttpMessageShim/
+
+override_dh_auto_test:

@@ -1,0 +1,22 @@
+Source: php-mpdf-psr-http-message-shim
+Section: php
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13)
+Standards-Version: 4.7.0
+Homepage: https://github.com/mpdf/psr-http-message-shim
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/Vitexus/php-mpdf-psr-http-message-shim.git
+Vcs-Browser: https://github.com/Vitexus/php-mpdf-psr-http-message-shim
+
+Package: php-mpdf-psr-http-message-shim
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ php-common,
+ php-psr-http-message
+Description: Shim to allow support of different psr/http-message versions
+ This library provides a shim allowing mPDF to support both PSR-7 v1.x
+ and v2.x versions of psr/http-message without requiring a specific version.
